@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href=""><img src="logoFix.png" alt="" style="width: 250PX; height: auto; display: inline-block;"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html"><h1>Home</h1></a></li>
+                    <li><a href="page2.html"><h1>Product</h1></a></li>
+                    <li><a href="page3.html"><h1>Newsletter</h1></a></li>
+                    <li><a href="page4.html"><h1>Support</h1></a></li>
+                    <li><a href="page5.html"><h1>About</h1></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="banner">
+            <h1>MK240 WIRELESS</h1>
+            <h1>KEYBOARD DAN</h1>
+            <h1>MOUSE COMBO</h1>
+            <!-- <a data-modal-target="#modal" href="#" type="button" class="cta">Click to Buy!</a> -->
+
+            <button data-modal-target="#modal" class="cta">Click to Buy!</button>
+
+            <div class="modal active" id="modal">
+                <div class="modal-header">
+                    
+                    <div class="title">
+                        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank You for Purchasing!
+                    </div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <center>
+                        Your product will be processed shortly <br>
+                        thank you!
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div id="overlay" class="active"></div>
+    </section>
+
+    <section class="p2">
+        <div class="a2">
+            <div class="judul">
+                <center>
+                    <div style="padding: 250px; margin-top: -250px;">
+                        <h1 style="font-size: 30px;">SEDERHANA, RINGKAS, DAN WARNA-WARNI</h1>
+                        <p>&nbsp;</p>
+                        <p>Sambutlah aksesori ringkas dan berwarna-warni yang akan mempercantik ruang kerja Anda. Keyboard dan mouse yang menghemat ruang ini memadukan pengetikan, penelusuran, dan scrolling yang mulus dengan kebebasan wireless nyaman yang Anda perlukan untuk bekerja dengan nyaman, di rumah maupun dalam perjalanan. </p>
+
+                    </div>
+                    <div style="margin-top: -200px;">
+                        <img src="mmm.jpg" alt="">
+                    </div>
+                </center>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="footcont">
+            <center>
+                <div style="padding-top: 60px;">
+                    <ul>
+                        <li><b>Phone : 123456789123</b></li>
+                        <li><b>Email : sh@gmail.com</b></li>
+                        <li><b>Address : Jl Brawijaya VIII/9, Dki Jakarta</b></li>
+                    </ul>
+                    
+                    <br>
+                    <a href="#"><img src="instagram-logo.png" alt="" style="width: 25px;" class="ig"></a>
+                    <a href="#"><img src="twitter.png" alt="" style="width: 25px; margin-left: 25px;"></a>
+                    
+                </div>
+            </center>
+            
+        </div>
+    </section>
+
+    <script>
+        const openModalButtons = document.querySelectorAll('[data-modal-target]')
+        const closeModalButtons = document.querySelectorAll('[data-close-button]')
+        const overlay = document.getElementById('overlay')
+
+        openModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = document.querySelector(button.dataset.modalTarget)
+            openModal(modal)
+        })
+        })
+
+        overlay.addEventListener('click', () => {
+            const modals = document.querySelectorAll('.modal.active')
+            modals.forEach(modal => {
+                closeModal(modal)
+            })
+        })
+
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.modal')
+                closeModal(modal)
+        })
+        })
+
+        function openModal(modal) {
+            if (modal == null) return
+            modal.classList.add('active')
+            overlay.classList.add('active')
+        }
+
+        function closeModal(modal) {
+            if (modal == null) return
+            modal.classList.remove('active')
+            overlay.classList.remove('active')
+        }
+    </script>
+</body>
+</html>
