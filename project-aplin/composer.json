@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "classmap": ["admin", "assets", "config", "template", "view", "library", "api"]
+    },
+    "require": {
+        "hidehalo/nanoid-php": "^1.1",
+        "midtrans/midtrans-php": "^2.5",
+        "phpmailer/phpmailer": "^6.8"
+    }
+}

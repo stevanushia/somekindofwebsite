@@ -1,0 +1,24 @@
+{
+  "name": "w3-reactadvtutor",
+  "version": "1.0.0",
+  "description": "![Logo](https://i.imgur.com/JyamFdr.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "npm install babel-cli@6 babel-preset-react-app@3",
+    "watch": "npx babel --watch src --out-dir assets --presets react-app/prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://git.sib.stts.edu/APLIN2023/Kelompok1-VideoOnDemand.git"
+  }
+}
